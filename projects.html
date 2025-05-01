@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Rahul Gupta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Rahul<span>Gupta</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>My Projects</h1>
+            <p>Explore my portfolio of professional and personal projects</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-page">
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="erp">ERP Solutions</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- ERP System Project -->
+            <div class="project-card erp" id="erp-system">
+                <div class="project-img">
+                    <img src="assets/images/erp-project.jpg" alt="ERP System">
+                </div>
+                <div class="project-info">
+                    <h3>Retail ERP System</h3>
+                    <p>A comprehensive ERP solution for retail businesses with inventory management, sales tracking, and reporting features. Implemented for multiple clients with customizations based on specific business needs.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">ERP</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <div class="project-details">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Real-time inventory tracking</li>
+                            <li>Integrated POS system</li>
+                            <li>Automated reporting</li>
+                            <li>Multi-store management</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline disabled">Live Demo</a>
+                        <a href="contact.html" class="btn btn-primary">Request Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- E-commerce Project -->
+            <div class="project-card web" id="ecommerce">
+                <div class="project-img">
+                    <img src="assets/images/ecommerce-project.jpg" alt="E-commerce Platform">
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <p>Full-featured online shopping platform with product management, cart functionality, and payment integration. Built with modern technologies for optimal performance and user experience.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">PostgreSQL</span>
+                        <span class="project-tag">Stripe API</span>
+                    </div>
+                    <div class="project-details">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Product catalog with search</li>
+                            <li>User authentication</li>
+                            <li>Payment processing</li>
+                            <li>Admin dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">Live Demo</a>
+                        <a href="#" class="btn btn-primary">View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task Management App -->
+            <div class="project-card mobile">
+                <div class="project-img">
+                    <img src="assets/images/task-app.jpg" alt="Task Management App">
+                </div>
+                <div class="project-info">
+                    <h3>Task Management App</h3>
+                    <p>A collaborative task management application with real-time updates, team features, and analytics. Designed to improve productivity for distributed teams.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Vue.js</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">Real-time</span>
+                        <span class="project-tag">PWA</span>
+                    </div>
+                    <div class="project-details">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Real-time collaboration</li>
+                            <li>Task assignment</li>
+                            <li>Progress tracking</li>
+                            <li>Offline capability</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">Live Demo</a>
+                        <a href="#" class="btn btn-primary">View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Projects -->
+            <div class="project-card web">
+                <div class="project-img">
+                    <img src="assets/images/crm-project.jpg" alt="CRM System">
+                </div>
+                <div class="project-info">
+                    <h3>CRM System</h3>
+                    <p>Custom CRM solution for small businesses with lead management, customer tracking, and sales pipeline features.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Angular</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card erp">
+                <div class="project-img">
+                    <img src="assets/images/inventory-project.jpg" alt="Inventory System">
+                </div>
+                <div class="project-info">
+                    <h3>Inventory Management</h3>
+                    <p>Specialized inventory management system with barcode scanning and reporting capabilities.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">ERP</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Django</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Have a Project in Mind?</h2>
+            <p>I'm available for freelance work and full-time positions. Let's discuss how I can help with your next project.</p>
+            <a href="contact.html" class="btn btn-light">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Rahul Gupta</h3>
+                <p>Software Engineer specializing in full-stack development and ERP solutions with 4 years of professional experience.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Rahulgupta70n@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +91 7980218962</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Chennai, India</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/JstRahulg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/rahul-gupta-413348220" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/realrahulg_official" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Rahul Gupta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
