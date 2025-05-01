@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Gupta | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: #fff;
+      transition: background 0.5s, color 0.5s;
+    }
+    body.light-theme {
+      background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    header h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 48px;
+      color: #ff66c4;
+      font-weight: bold;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    nav.menu {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav.menu a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav.menu a:hover {
+      color: #ff66c4;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 0 20px #ff66c4;
+      transition: transform 0.5s;
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+    }
+    h2 {
+      color: #ff66c4;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #ff66c4;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #ff3399;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      color: #bbb;
+      font-size: 14px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ff66c4;
+      transform: scale(1.3);
+    }
+    .theme-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff66c4;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .theme-switcher:hover {
+      transform: rotate(180deg);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+    }
+    .contact-form button {
+      background-color: #ff66c4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #ff3399;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #ff66c4;
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-switcher" onclick="toggleTheme()">
+    <i class="fas fa-adjust"></i>
+  </div>
+  <header>
+    <h1>Rahul Gupta</h1>
+    <p>Hi all, I'm Rahul</p>
+    <p>A passionate DevOps Engineer, Full Stack Web Developer, and Front-end Web Development Student Mentor having an experience of Infrastructure management, CI/CD initiation & automation, package and release tooling and building Web applications with JavaScript / Reactjs / Nodejs / Angular like libraries and frameworks.</p>
+  </header>
+
+  <nav class="menu">
+    <a href="https://www.facebook.com/JstRahulg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/realrahulg_official" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/rahul-gupta-413348220" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </nav>
+
+  <section>
+    <img src="Rahul.jpg" alt="Rahul Gupta" class="profile-img" />
+    <a href="Rahul_Gupta_Resume.pdf" download class="download-btn">Download Resume</a>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>SQL, Python, C, C++</li>
+      <li>ERP software integrations and implementations</li>
+      <li>Software training and Business solutions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>Completed B.Tech in Computer Science from West Bengal University of Technology (2016 - 2020)</p>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>Distinction certificate in 7-day Robotics project by Skyfi Labs (2017)</li>
+      <li>Certified in Problem Solving in C language by NPTEL</li>
+      <li>Certified and secured a good position in Python development program by Microsoft (2020)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul>
+      <li>Worked at Gofrugal Technology as Product Consultant (Sep 2021 – Jul 2023)</li>
+      <li>Currently working at Zoho as Solution Consultant (Jul 2023 – Present)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>DevOps CI/CD Pipeline</h3>
+        <p>Built a full CI/CD pipeline using Jenkins, Docker, and Kubernetes for automating deployments of web applications.</p>
+      </div>
+      <div class="project-card">
+        <h3>ERP Software Integration</h3>
+        <p>Implemented custom ERP integration modules for clients to manage sales, inventory, and CRM workflows.</p>
+      </div>
+      <div class="project-card">
+        <h3>Student Mentorship Platform</h3>
+        <p>Developed a web-based mentorship platform using React.js and Node.js to help students connect with mentors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/xleqzyoq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    Contact: Rahulgupta70n@gmail.com | +91 7980218962
+    <div class="social-icons">
+      <a href="https://www.facebook.com/JstRahulg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/realrahulg_official" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/rahul-gupta-413348220" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    2025&copy;Rahul Gupta.All rights reserved
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
